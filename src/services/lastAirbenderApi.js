@@ -6,7 +6,7 @@ export const getCharacters = () => {
       return json;
     })
     .then(json => json.map(character => ({
-      photoUrl: character.photoUrl,
+      photoUrl: character.photoUrl || 'http://placegoat.com/200/200',
       name: character.name,
       _id: character._id
     })));
