@@ -8,6 +8,9 @@ export const getCharacters = () => {
     .then(json => json.map(character => ({
       photoUrl: character.photoUrl || 'http://placegoat.com/200/200',
       name: character.name,
-      _id: character._id
+      _id: character._id,
+      enemies: character.enemies,
+      allies: character.allies,
+      affiliation: character.affiliation
     })));
 };
